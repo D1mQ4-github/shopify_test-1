@@ -4,6 +4,11 @@
   		<img src="{{ block.settings.image | img_url: 'master' }}">
   	{% endfor %}
 </div>
+<div class="slider__slides">
+	{% for block in section.blocks %}
+  		<img src="{{ block.settings.slide | img_url: 'master' }}">
+  	{% endfor %}
+</div>
 
 {% schema %}
   {
