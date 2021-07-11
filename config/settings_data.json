@@ -31,24 +31,6 @@
       },
       "slider": {
         "type": "slider",
-        "blocks": {
-          "09f095fd-a960-4162-92fb-88c7fbd71770": {
-            "type": "image",
-            "settings": {
-              "slide": "shopify:\/\/shop_images\/colored-pencils-piled-up-on-a-black-background.jpg"
-            }
-          },
-          "fb42fbb3-ec15-42ac-a2ae-4b124c93b0fd": {
-            "type": "slide",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/colored-pencils-piled-up-on-a-black-background.jpg"
-            }
-          }
-        },
-        "block_order": [
-          "09f095fd-a960-4162-92fb-88c7fbd71770",
-          "fb42fbb3-ec15-42ac-a2ae-4b124c93b0fd"
-        ],
         "settings": {
           "title": "Slider"
         }
