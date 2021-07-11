@@ -32,15 +32,15 @@
       "slider": {
         "type": "slider",
         "blocks": {
-          "4a32acb2-02ed-46dd-88cb-b4586bb61c81": {
-            "type": "image",
+          "0951234e-0079-4298-b1a1-03e020967f18": {
+            "type": "slide",
             "settings": {
-              "slide": "shopify:\/\/shop_images\/colored-pencils-piled-up-on-a-black-background.jpg"
+              "image": "shopify:\/\/shop_images\/a-yellow-car-parked-on-a-lush-country-road.jpg"
             }
           }
         },
         "block_order": [
-          "4a32acb2-02ed-46dd-88cb-b4586bb61c81"
+          "0951234e-0079-4298-b1a1-03e020967f18"
         ],
         "settings": {
           "title": "Slider"
