@@ -32,15 +32,15 @@
       "slider": {
         "type": "slider",
         "blocks": {
-          "377c5864-d991-40e6-a9ab-996510ac45c3": {
-            "type": "slide",
+          "c6455725-be26-4758-8475-c34c526eec28": {
+            "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/a-yellow-car-parked-on-a-lush-country-road.jpg"
+              "slide": "shopify:\/\/shop_images\/a-yellow-car-parked-on-a-lush-country-road.jpg"
             }
           }
         },
         "block_order": [
-          "377c5864-d991-40e6-a9ab-996510ac45c3"
+          "c6455725-be26-4758-8475-c34c526eec28"
         ],
         "settings": {
           "title": "Slider"
