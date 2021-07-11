@@ -1,18 +1,22 @@
 <h3 class="slider__title">{{ section.settings.title }}</h3>
 
-<div class="slider__slides">
-	{%- for block in section.blocks -%}
-  		<img src="{{- block.settings.image | img_url: '500x500' -}}">
-  	{%- endfor -%}
-</div>
+{% for block in section.blocks %}
+	{% if block.type == 'image' %}
+      <div class="slider__slides">
+          {%- for block in section.blocks -%}
+              <img src="{{- block.settings.image | img_url: '500x500' -}}">
+          {%- endfor -%}
+      </div>
+	{% endif %}
+{% endfor %}
 
 {% for block in section.blocks %}
 	{% if block.type == 'slide' %}
-<div class="slider__slides">
-	{%- for block in section.blocks -%}
-  		<img src="{{- block.settings.slide | img_url: '500x500' -}}">
-  	{%- endfor -%}
-</div>
+      <div class="slider__slides">
+          {%- for block in section.blocks -%}
+              <img src="{{- block.settings.slide | img_url: '500x500' -}}">
+          {%- endfor -%}
+      </div>
 	{% endif %}
 {% endfor %}
 
