@@ -10,16 +10,16 @@
             "text_style": "uppercase"
           }
         },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
         "subtitle": {
           "type": "text",
           "settings": {
             "text": "{{ product.metafields.descriptors.subtitle.value }}",
             "text_style": "subtitle"
-          }
-        },
-        "title": {
-          "type": "title",
-          "settings": {
           }
         },
         "price": {
