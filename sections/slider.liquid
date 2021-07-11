@@ -1,13 +1,13 @@
 <h3 class="slider__title">{{ section.settings.title }}</h3>
 <div class="slider__slides">
-	{% for block in section.blocks %}
-  		<img src="{{ block.settings.image | img_url: '500x500' }}">
-  	{% endfor %}
+	{%- for block in section.blocks -%}
+  		<img src="{{- block.settings.image | img_url: '500x500' -}}">
+  	{%- endfor -%}
 </div>
 <div class="slider__slides">
-	{% for block in section.blocks %}
-  		<img src="{{ block.settings.slide | img_url: '500x500' }}">
-  	{% endfor %}
+	{%- for block in section.blocks -%}
+  		<img src="{{- block.settings.slide | img_url: '500x500' -}}">
+  	{%- endfor -%}
 </div>
 
 {% schema %}
