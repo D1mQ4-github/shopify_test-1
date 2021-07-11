@@ -1,3 +1,6 @@
+{{ section.settings.title }}
+{{ section.settings.subtitle }}
+
 {% schema %}
   {
     "name": "Slider",
@@ -7,7 +10,12 @@
       {
         "type": "text",
         "id": "title", 
-        "label": "My slider label"
+        "label": "Slides title"
+      },
+      {
+        "type": "richtext",
+        "id": "subtitle",
+        "label": "Slider subtitle"
       }
     ],
     "blocks": [
