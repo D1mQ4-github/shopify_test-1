@@ -32,7 +32,8 @@
       "slider": {
         "type": "slider",
         "settings": {
-          "title": "bkghjg"
+          "title": "title 1111",
+          "subtitle": "<p>subtitle 2222<\/p>"
         }
       },
       "footer": {
