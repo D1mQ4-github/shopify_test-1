@@ -9,23 +9,6 @@
   {% endcase %}
 {% endfor %}
 
-
-{% for block in section.blocks %}
-	{% if block.type == 'image' %}
-      <div class="slider__slides">
-              <img src="{{- block.settings.image | img_url: '500x500' -}}">
-      </div>
-	{% endif %}
-{% endfor %}
-
-{% for block in section.blocks %}
-	{% if block.type == 'slide' %}
-      <div class="slider__slides">
-              <img src="{{- block.settings.slide | img_url: '500x500' -}}">
-      </div>
-	{% endif %}
-{% endfor %}
-
 {% schema %}
   {
     "name": "Slider",
