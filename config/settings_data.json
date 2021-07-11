@@ -31,6 +31,17 @@
       },
       "slider": {
         "type": "slider",
+        "blocks": {
+          "ca38bcd1-f728-40d9-a039-679ff8ad686e": {
+            "type": "image",
+            "settings": {
+              "slide": "shopify:\/\/shop_images\/colored-pencils-piled-up-on-a-black-background.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "ca38bcd1-f728-40d9-a039-679ff8ad686e"
+        ],
         "settings": {
           "title": "Slider"
         }
