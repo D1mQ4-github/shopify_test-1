@@ -32,7 +32,7 @@
       "slider": {
         "type": "slider",
         "blocks": {
-          "0951234e-0079-4298-b1a1-03e020967f18": {
+          "377c5864-d991-40e6-a9ab-996510ac45c3": {
             "type": "slide",
             "settings": {
               "image": "shopify:\/\/shop_images\/a-yellow-car-parked-on-a-lush-country-road.jpg"
@@ -40,7 +40,7 @@
           }
         },
         "block_order": [
-          "0951234e-0079-4298-b1a1-03e020967f18"
+          "377c5864-d991-40e6-a9ab-996510ac45c3"
         ],
         "settings": {
           "title": "Slider"
