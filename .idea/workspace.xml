@@ -10,7 +10,22 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="041c5028dd26d983cc9218a6f307ff4350869494" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="First PR" />
+        <option name="rewordedMessage" value="First PR [restore]" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="041c5028dd26d983cc9218a6f307ff4350869494" />
   </component>
   <component name="ProjectId" id="274NEZ3iSuhyO3PEpLTZR94nn3y" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -35,10 +50,26 @@
       <option name="presentableId" value="Default" />
       <updated>1648575286885</updated>
       <workItem from="1648575290912" duration="78000" />
+      <workItem from="1649320986320" duration="200000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
 </project>

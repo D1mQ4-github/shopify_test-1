@@ -1,0 +1,72 @@
+Index: layout/theme.liquid
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!doctype html>\n<html class=\"no-js\" lang=\"{{ request.locale.iso_code }}\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n    <meta name=\"theme-color\" content=\"\">\n    <link rel=\"canonical\" href=\"{{ canonical_url }}\">\n    <link rel=\"preconnect\" href=\"https://cdn.shopify.com\" crossorigin>\n\n    {%- if settings.favicon != blank -%}\n      <link rel=\"icon\" type=\"image/png\" href=\"{{ settings.favicon | img_url: '32x32' }}\">\n    {%- endif -%}\n\n    {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}\n      <link rel=\"preconnect\" href=\"https://fonts.shopifycdn.com\" crossorigin>\n    {%- endunless -%}\n\n    <title>{{ page_title }}</title>\n\n    {% if page_description %}\n      <meta name=\"description\" content=\"{{ page_description | escape }}\">\n    {% endif %}\n\n    {% render 'meta-tags' %}\n\n    <script src=\"{{ 'global.js' | asset_url }}\" defer=\"defer\"></script>\n    {{ content_for_header }}\n\n    {%- liquid\n      assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'\n      assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'\n      assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'\n    %}\n\n    {% style %}\n      {{ settings.type_body_font | font_face: font_display: 'swap' }}\n      {{ body_font_bold | font_face: font_display: 'swap' }}\n      {{ body_font_italic | font_face: font_display: 'swap' }}\n      {{ body_font_bold_italic | font_face: font_display: 'swap' }}\n      {{ settings.type_header_font | font_face: font_display: 'swap' }}\n\n      :root {\n        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};\n        --font-body-style: {{ settings.type_body_font.style }};\n        --font-body-weight: {{ settings.type_body_font.weight }};\n\n        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};\n        --font-heading-style: {{ settings.type_header_font.style }};\n        --font-heading-weight: {{ settings.type_header_font.weight }};\n\n        --color-base-text: {{ settings.colors_text.red }}, {{ settings.colors_text.green }}, {{ settings.colors_text.blue }};\n        --color-base-background-1: {{ settings.colors_background_1.red }}, {{ settings.colors_background_1.green }}, {{ settings.colors_background_1.blue }};\n        --color-base-background-2: {{ settings.colors_background_2.red }}, {{ settings.colors_background_2.green }}, {{ settings.colors_background_2.blue }};\n        --color-base-solid-button-labels: {{ settings.colors_solid_button_labels.red }}, {{ settings.colors_solid_button_labels.green }}, {{ settings.colors_solid_button_labels.blue }};\n        --color-base-outline-button-labels: {{ settings.colors_outline_button_labels.red }}, {{ settings.colors_outline_button_labels.green }}, {{ settings.colors_outline_button_labels.blue }};\n        --color-base-accent-1: {{ settings.colors_accent_1.red }}, {{ settings.colors_accent_1.green }}, {{ settings.colors_accent_1.blue }};\n        --color-base-accent-2: {{ settings.colors_accent_2.red }}, {{ settings.colors_accent_2.green }}, {{ settings.colors_accent_2.blue }};\n        --payment-terms-background-color: {{ settings.colors_background_1 }};\n      }\n\n      *,\n      *::before,\n      *::after {\n        box-sizing: inherit;\n      }\n\n      html {\n        box-sizing: border-box;\n        font-size: 62.5%;\n        height: 100%;\n      }\n\n      body {\n        display: grid;\n        grid-template-rows: auto auto 1fr auto;\n        grid-template-columns: 100%;\n        min-height: 100%;\n        margin: 0;\n        font-size: 1.5rem;\n        letter-spacing: 0.06rem;\n        line-height: 1.8;\n        font-family: var(--font-body-family);\n        font-style: var(--font-body-style);\n        font-weight: var(--font-body-weight);\n      }\n\n      @media screen and (min-width: 750px) {\n        body {\n          font-size: 1.6rem;\n        }\n      }\n    {% endstyle %}\n\n    {{ 'base.css' | asset_url | stylesheet_tag }}\n\n    {%- unless settings.type_body_font.system? -%}\n      <link rel=\"preload\" as=\"font\" href=\"{{ settings.type_body_font | font_url }}\" type=\"font/woff2\" crossorigin>\n    {%- endunless -%}\n    {%- unless settings.type_header_font.system? -%}\n      <link rel=\"preload\" as=\"font\" href=\"{{ settings.type_header_font | font_url }}\" type=\"font/woff2\" crossorigin>\n    {%- endunless -%}\n\n    <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>\n  </head>\n\n  <body>\n    <a class=\"skip-to-content-link button visually-hidden\" href=\"#MainContent\">\n      {{ \"accessibility.skip_to_text\" | t }}\n    </a>\n\n    <h1>IINITIALL CONTENT</h1>\n\n    <main id=\"MainContent\" class=\"content-for-layout focus-none\" role=\"main\" tabindex=\"-1\">\n      {{ content_for_layout }}\n    </main>\n  </body>\n</html>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/layout/theme.liquid b/layout/theme.liquid
+--- a/layout/theme.liquid	(revision 370e254420fc713892ad497f89e2a3560070481d)
++++ b/layout/theme.liquid	(date 1648763544777)
+@@ -108,8 +108,9 @@
+     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
+       {{ "accessibility.skip_to_text" | t }}
+     </a>
++<h1>STAGING THEME THERE</h1>
+ 
+-    <h1>IINITIALL CONTENT</h1>
++    <h2>SECOND PR</h2>
+ 
+     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+       {{ content_for_layout }}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"80be3e5e-ffff-42e0-8930-678a08ee3308\" name=\"Changes\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/layout/theme.liquid\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/layout/theme.liquid\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectId\" id=\"274NEZ3iSuhyO3PEpLTZR94nn3y\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n    <option name=\"sortByType\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"80be3e5e-ffff-42e0-8930-678a08ee3308\" name=\"Changes\" comment=\"\" />\n      <created>1648575286885</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1648575286885</updated>\n      <workItem from=\"1648575290912\" duration=\"78000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 370e254420fc713892ad497f89e2a3560070481d)
++++ b/.idea/workspace.xml	(date 1648763574145)
+@@ -1,16 +1,20 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="80be3e5e-ffff-42e0-8930-678a08ee3308" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/layout/theme.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/layout/theme.liquid" afterDir="false" />
+-    </list>
++    <list default="true" id="80be3e5e-ffff-42e0-8930-678a08ee3308" name="Changes" comment="" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="staging" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++    <option name="RESET_MODE" value="MIXED" />
+   </component>
+   <component name="ProjectId" id="274NEZ3iSuhyO3PEpLTZR94nn3y" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+@@ -42,6 +46,15 @@
+     <option name="version" value="3" />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
+     <option name="oldMeFiltersMigrated" value="true" />
+   </component>
+ </project>
+\ No newline at end of file

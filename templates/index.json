@@ -6,7 +6,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand"
+            "heading": "Change after publish staging"
           }
         },
         "button": {
@@ -26,6 +26,8 @@
         "button"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
+        "image_2": "shopify:\/\/shop_images\/silhouetted-couples-look-out-at-a-city-at-night.jpg",
         "desktop_text_box_position": "flex-end",
         "color_scheme": "background-1",
         "stack_images_on_mobile": true,
